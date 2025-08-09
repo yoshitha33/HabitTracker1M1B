@@ -22,7 +22,12 @@ function MainApp() {
   const navigate = useNavigate();
 
   const handleComplete = (data) => {
-    setResultData(data);
+    setResultData({
+      scores: data.scores,
+      totalFootprint: data.totalFootprint,
+      mostUsed: data.mostUsed,
+      excess: data.excess
+    });
     setShowSuggestions(false);
     navigate("/results");
   };
@@ -40,8 +45,10 @@ function MainApp() {
           element={
             resultData && !showSuggestions ? (
               <Results
-                excess={resultData.excess}
+                scores={resultData.scores}
+                totalFootprint={resultData.totalFootprint}
                 mostUsed={resultData.mostUsed}
+                excess={resultData.excess}
                 onViewSuggestions={() => setShowSuggestions(true)}
               />
             ) : (
