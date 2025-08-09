@@ -12,7 +12,7 @@ function Navbar() {
       <div className="space-x-6 text-lg">
         <Link to="/dashboard" className={location.pathname === "/dashboard" ? "text-green-700 font-semibold" : "hover:text-green-600"}>Dashboard</Link>
         <Link to="/" className={location.pathname === "/" ? "text-green-700 font-semibold" : "hover:text-green-600"}>Survey</Link>
-        <Link to="/results" className={location.pathname === "/results" ? "text-green-700 font-semibold" : "hover:text-green-600"}>Results</Link>
+        {/* <Link to="/results" className={location.pathname === "/results" ? "text-green-700 font-semibold" : "hover:text-green-600"}>Results</Link> */}
         <Link to="/challenges" className={location.pathname === "/challenges" ? "text-green-700 font-semibold" : "hover:text-green-600"}>Challenges</Link>
         <Link to="/quizzes" className={location.pathname === "/quizzes" ? "text-green-700 font-semibold" : "hover:text-green-600"}>Quizzes</Link>
       </div>
